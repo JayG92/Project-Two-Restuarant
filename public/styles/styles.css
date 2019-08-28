@@ -1,2 +1,61 @@
+.sidebar {
+  position: fixed;
+  width: 320px;
+  min-height:100vh;
+  background-color: #2A2C30;
+}
 
+.sidebarText {
+  color: white;
+  font-size: 15px;
+}
+.sidebarText:hover {
+  color: rgb(201, 181, 157);
+}
 
+.logo {
+  margin-left: 5%;
+  margin-top: 30%;
+  margin-bottom: 5%;
+  width: 275px;
+  height: 175px;
+}
+
+.hrColor {
+  background-color: #808080;
+  width: 70%;
+}
+
+a {
+  display: contents;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  line-height: 50px;
+  border-top-width: 0.5px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-color: rgb(54, 56, 59);
+  font-family: 'Fjalla One', sans-serif;
+  line-height: 60px;
+}
+
+ul {
+  display: inline;
+}
