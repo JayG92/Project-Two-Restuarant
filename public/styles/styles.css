@@ -1,2 +1,179 @@
+html {
+  background-color: #2A2C30;
+}
+
+.sidebar {
+  position: fixed;
+  width: 320px;
+  min-height:100vh;
+  background-color: #2A2C30;
+}
+
+.sidebar::after {
+    box-shadow: 10px 0 10px -10px inset;
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 15px;
+}
+
+.sidebarText {
+  color: white;
+  font-size: 15px;
+}
+.sidebarText:hover {
+  color: rgb(179, 151, 118);
+}
+
+.sidebarOrderOnline {
+  color: rgb(201, 85, 85);
+  font-size: 15px;
+}
+.sidebarSpecials {
+  color: rgb(201, 150, 85);
+  font-size: 15px;
+}
+
+.logo {
+  margin-left: 5%;
+  margin-top: 25%;
+  margin-bottom: 5%;
+  width: 275px;
+  height: 200px;
+}
+
+.hrColor {
+  background-color: #808080;
+  width: 70%;
+}
+
+a {
+  display: contents;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  line-height: 50px;
+  border-top-width: 0.5px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-color: rgb(54, 56, 59);
+  font-family: 'Fjalla One', sans-serif;
+  line-height: 60px;
+}
 
 
+li.selected {
+  margin-left: 4px;
+  border-right-width: 4px;
+  border-right-color: rgb(179, 151, 118);
+}
+
+ul {
+  display: inline;
+}
+
+
+
+
+/* -- Content Box -- */
+.main-container {
+  margin-left: 320px;
+  height: auto;
+  background-color: rgb(59, 59, 63);
+}
+
+.mainmenu-image {
+  height: 300px;
+  width: 100%;
+}
+
+.main-topcontent {
+  letter-spacing: 1px;
+  /* font-family: 'Fjalla One', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin-top: 5%;
+  margin-left: 5%;
+  display: grid;
+}
+
+.main-topcontentText {
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mainmenu-sideImage1 {
+  position: absolute;
+  right: 0%;
+  display: inline;
+  top: 300px;
+}
+.mainmenu-sideImage2 {
+  position: absolute;
+  right: 0%;
+  display: inline;
+  top: 575px;
+}
+.mainmenu-sideImage4 {
+  position: absolute;
+  right: 345px;
+  display: inline;
+  top: 575px;
+  height: 288px;
+  width: 570px;
+}
+
+.hrContent {
+  background-color: #808080;
+  width: 20%;
+  left: 0%;
+  margin-left: 0px;
+}
+
+.main-imagecontainer {
+  height: 400px;
+}
+
+/* -- Experience -- */
+.main-experienceText {
+  letter-spacing: 1px;
+  color: rgb(179, 151, 118);
+  margin-bottom: 5%;
+}
+
+.main-OurMenu {
+  padding: 1.5rem 2rem;
+  margin-top: 5%;
+  background-color: #696058;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.main-ViewMenuBtn {
+  margin-top: 2.5%;
+  width: 30%;
+}
+
+.main-OurMenuBackground {
+  height: 275px; /* 275px */
+  margin-left: -55px;
+  background-color: rgb(35, 37, 41);
+}
