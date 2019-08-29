@@ -1,7 +1,3 @@
-$(document).ready(function() {
-  console.log("js file linked");
-})
-
-$(".sidebarText").click(function() {
-  
-})
+// $(document).ready(function() {
+//   console.log("js file linked");
+// })

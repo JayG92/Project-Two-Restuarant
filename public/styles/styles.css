@@ -2,6 +2,10 @@ html {
   background-color: #2A2C30;
 }
 
+body {
+  background-color: rgb(59, 59, 63);
+}
+
 .sidebar {
   position: fixed;
   width: 320px;
@@ -84,6 +88,10 @@ li.selected {
   margin-left: 4px;
   border-right-width: 4px;
   border-right-color: rgb(179, 151, 118);
+}
+
+.selected {
+  color: rgb(179, 151, 118);
 }
 
 ul {
@@ -176,4 +184,17 @@ ul {
   height: 275px; /* 275px */
   margin-left: -55px;
   background-color: rgb(35, 37, 41);
+}
+
+
+
+
+/* -- Menu --*/
+.menu-topimage {
+  height: 300px;
+  width: 100%;
+}
+
+.limenu {
+  border-top-width: 0px;
 }
