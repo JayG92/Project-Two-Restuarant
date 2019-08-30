@@ -11,11 +11,8 @@
   },
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "bulma": "^0.7.5",
-=======
     "animate.css": "^3.7.2",
->>>>>>> 39a8b9f38ce6c28a2e99214f3b47e5267270128b
     "dotenv": "^8.0.0",
     "expres": "0.0.5",
     "express": "^4.17.1",
