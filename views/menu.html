@@ -9,9 +9,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -58,9 +56,9 @@
                     <div class="sidebarOrderOnline">ORDER ONLINE</div>
                 </li>
             </a>
-            <a href="#">
+            <a href="signup.html">
                 <li>
-                    <div class="sidebarSpecials">REWARDS</div>
+                    <div class="sidebarSpecials">Sign Up</div>
                 </li>
             </a>
         </ul>
@@ -68,41 +66,16 @@
     <div class="main-container">
         <img class="menu-topimage" src="images/menu-top1.jpg">
         <div class="main-topcontent">
+            <div id="test"></div>
             <h1>Chef's Table</h1>
+            <hr class="menu-hr">
             <br>
             <div class="row">
                 <div class="col-6">
                     <ul class="list-unstyled">
                         <li class="media limenu">
                             <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item1</h5>
-                                Description
-                            </div>
-                        </li>
-                        <li class="media my-4 limenu">
-                            <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item2</h5>
-                                Description
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li class="media limenu">
-                            <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item3</h5>
-                                Description
-                            </div>
-                        </li>
-                        <li class="media my-4 limenu">
-                            <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item4</h5>
-                                Description
+                            <div class="media-body featured">
                             </div>
                         </li>
                     </ul>
@@ -111,49 +84,220 @@
 
             <hr>
             <h1>Starters</h1>
+            <hr class="menu-hr">
             <br>
             <div class="row">
                 <div class="col-6">
                     <ul class="list-unstyled">
                         <li class="media limenu">
                             <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item1</h5>
-                                Description
-                            </div>
-                        </li>
-                        <li class="media my-4 limenu">
-                            <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item2</h5>
-                                Description
+                            <div class="media-body starters">
                             </div>
                         </li>
                     </ul>
                 </div>
-                <div class="col-6">
-                    <ul class="list-unstyled">
-                        <li class="media limenu">
-                            <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item3</h5>
-                                Description
-                            </div>
-                        </li>
-                        <li class="media my-4 limenu">
-                            <img src="" class="mr-3" alt="">
-                            <div class="media-body">
-                                <h5 class="mt-0 mb-1">Item4</h5>
-                                Description
-                            </div>
-                        </li>
-                    </ul>
+            </div>
+            <hr>
+            <h1>Salads & Soups</h1>
+            <hr class="menu-hr">
+            <br>
+            <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li class="media limenu">
+                                <img src="" class="mr-3" alt="">
+                                <div class="media-body salads-soups">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+            <hr>
+            <h1>Signature Steaks</h1>
+            <hr class="menu-hr">
+            <br>
+            <div class="row">
+                    <div class="col-6">
+                        <ul class="list-unstyled">
+                            <li class="media limenu">
+                                <img src="" class="mr-3" alt="">
+                                <div class="media-body steaks">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <hr>
+                <h1>Sides</h1>
+                <hr class="menu-hr">
+                <br>
+                <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="media limenu">
+                                    <img src="" class="mr-3" alt="">
+                                    <div class="media-body sides">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <h1>Desserts</h1>
+                    <hr class="menu-hr">
+                    <br>
+                    <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li class="media limenu">
+                                        <img src="" class="mr-3" alt="">
+                                        <div class="media-body desserts">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
 
 
 
 </body>
+<script>
+    function runTableQuery() {
+        // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+        $.ajax({ url: "/featured", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var menuItem = $(".featured")
+                    var itemTitle = $("<div class='mt-0 mb-1'>");
+                    itemTitle.append(
+                        $("<h3>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                    )
+
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+            })
+
+        $.ajax({ url: "/starters", method: "GET" })
+            .then(function (result) {
+                for (i = 0; i < result.length; i++) {
+                    var menuItem = $(".starters")
+                    var itemTitle = $("<div class='mt-0 mb-1'>");
+                    itemTitle.append(
+                        $("<h3>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                    )
+
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+            })
+
+            $.ajax({ url: "/salads-soups", method: "GET" })
+            .then(function (result) {
+                for (i = 0; i < result.length; i++) {
+                    var menuItem = $(".salads-soups")
+                    var itemTitle = $("<div class='mt-0 mb-1'>");
+                    itemTitle.append(
+                        $("<h3>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                    )
+
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+            })
+
+            $.ajax({ url: "/steaks", method: "GET" })
+            .then(function (result) {
+                for (i = 0; i < result.length; i++) {
+                    var menuItem = $(".steaks")
+                    var itemTitle = $("<div class='mt-0 mb-1'>");
+                    itemTitle.append(
+                        $("<h3>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                    )
+
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+            })
+
+            $.ajax({ url: "/sides", method: "GET" })
+            .then(function (result) {
+                for (i = 0; i < result.length; i++) {
+                    var menuItem = $(".sides")
+                    var itemTitle = $("<div class='mt-0 mb-1'>");
+                    itemTitle.append(
+                        $("<h3>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                    )
+
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+            })
+
+            $.ajax({ url: "/desserts", method: "GET" })
+            .then(function (result) {
+                for (i = 0; i < result.length; i++) {
+                    var menuItem = $(".desserts")
+                    var itemTitle = $("<div class='mt-0 mb-1'>");
+                    itemTitle.append(
+                        $("<h3>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                    )
+
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc)
+
+                }
+            })
+    }
+
+    // for (var i = 0; i < result.length; i++) {
+
+    //     var table = $(".featured")
+
+    //     var listTitle = $("<div class='mt-0 mb-1'>");
+
+    //     listTitle.append(
+    //         $("<h1>").text(result[i].name)
+    //     );
+
+    //     table.append(listTitle);
+    // }
+    runTableQuery();
+</script>
 <script src="js/index.js"></script>
 
 </html>
