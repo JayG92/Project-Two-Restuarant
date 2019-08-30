@@ -13,7 +13,7 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-module.exports = function (app) {
+
   app.get("/a", function (req, res) {
     db.menu.findAll({}).then(function(results) {
       // results are available to us inside the .then
@@ -81,7 +81,7 @@ app.get("/desserts", function (req, res) {
   });
 })
 
-
+};
 
   // Create a new example
   // app.post("/api/examples", function(req, res) {
@@ -95,5 +95,4 @@ app.get("/desserts", function (req, res) {
   //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
   //     res.json(dbExample);
   //   });
-  // });
-};
+  //
