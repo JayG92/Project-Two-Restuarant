@@ -1,6 +1,7 @@
 require("dotenv").config();
 var express = require("express");
-
+var mysql = require("mysql");
+var Sequelize = require("sequelize");
 
 var db = require("./models");
 
@@ -25,6 +26,28 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
+// MYSQL
+// var con = mysql.createConnection({
+//   host: "localhost",
+//   port: 3306,
+//   user: "root",
+//   password: "root",
+//   database: "project_two"
+// });
+
+var sequelize = new Sequelize("sequelize_menu", "root", "root", {
+  host: "localhost",
+  port: 3306,
+  dialect: "mysql",
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  }
+});
+
+
+
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
@@ -37,3 +60,5 @@ db.sequelize.sync(syncOptions).then(function() {
 });
 
 module.exports = app;
+// module.exports = con;
+module.exports = sequelize;

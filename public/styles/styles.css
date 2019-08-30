@@ -198,3 +198,18 @@ ul {
 .limenu {
   border-top-width: 0px;
 }
+
+.marginMenu {
+  margin-bottom: 30px;
+}
+
+.colorTitle {
+  color: rgb(179, 151, 118);
+}
+
+.menu-hr {
+  background-color: #808080;
+  width: 20%;
+  margin-left: 0px;
+  margin-top: 0px;
+}
