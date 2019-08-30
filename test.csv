@@ -1,0 +1,23 @@
+id,name,description,price,tag,createdAt,updatedAt
+1,"BLACKENED HALIBUT","roasted corn, poblano relish",15,featured,NULL,NULL
+2,"BLEU CHEESE FILET & BLACKENED SHRIMP","prosciutto, garlic mash, demi glace",20,featured,NULL,NULL
+3,"WATERMELON SALAD","feta, arugula, heirloom carrots, honey-lime vinaigrette, balsamic reduction",10,featured,NULL,NULL
+4,"CHILLED SEAFOOD TOWER","colossal cold water king crab, ahi tuna poke, shrimp cocktail, north atlantic lobster tails",149,starters,NULL,NULL
+5,"BURRATA WITH PROSCIUTTO","charred campari tomatoes, prosciutto, wild arugula, toasted garlic crostini",80,starters,NULL,NULL
+6,"BEEF CARPACCIO","caper-creole mustard sauce & red onion",60,starters,NULL,NULL
+7,"FLEMING'S SALAD","walnuts, tomatoes, dried cranberries, red onion, lemon balsamic vinaigrette",35,salads&soups,NULL,NULL
+8,"WEDGE SALAD","bacon, campari tomatoes, red onion, danish blue cheese crumbles, blue cheese dressing, balsamic glaze",35,salads&soups,NULL,NULL
+9,"FRENCH ONION SOUP","baked with gruyère & parmesan cheeses",35,salads&soups,NULL,NULL
+10,"LOBSTER BISQUE","north atlantic lobster, spiced sherry cream",35,salads&soups,NULL,NULL
+11,"MAIN FILET MIGNON",,60,steaks,NULL,NULL
+12,"PRIME NEW YORK STRIP",,50,steaks,NULL,NULL
+13,"CERTIFIED ANGUS BEEF RIBEYE",,70,steaks,NULL,NULL
+14,"PRIME TOMAHAWK",,100,steaks,NULL,NULL
+15,"SAUTÉED MUSHROOMS","button, shiitake & portobello mushrooms, fresh garlic",8,sides,NULL,NULL
+16,"CREAMED SPINACH","blended with parmesan, cream, spices",8,sides,NULL,NULL
+17,"MASHED POTATOES","butter, kosher salt, cracked black pepper",8,sides,NULL,NULL
+18,"NORTH ATLANTIC LOBSTER MACARONI & CHEESE","tender lobster, cavatappi, smoked cheddar, chipotle panko breadcrumbs",8,sides,NULL,NULL
+19,PROFITEROLES,"classic preparation with pâte à choux pastry, premium vanilla ice cream & warm chocolate served tableside",15,desserts,NULL,NULL
+20,"FRESH BERRIES & CHANTILLY CREAM","seasonal berries served with a side of chantilly whipped cream",15,desserts,NULL,NULL
+21,"CHOCOLATE LAVA CAKE","rich chocolate cake with a molten center of Callebaut Belgian chocolate, served with premium vanilla ice cream & chopped pistachios",15,desserts,NULL,NULL
+22,"CRÈME BRÛLÉE","creamy tahitian vanilla bean custard served with fresh seasonal berries",15,desserts,NULL,NULL
