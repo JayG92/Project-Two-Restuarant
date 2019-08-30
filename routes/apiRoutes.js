@@ -1,6 +1,5 @@
 var db = require("../models");
 
-<<<<<<< HEAD
 module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
@@ -14,7 +13,6 @@ module.exports = function(app) {
         res.status(401).json(err);
       });
   });
-=======
 module.exports = function (app) {
   app.get("/a", function (req, res) {
     db.menu.findAll({}).then(function(results) {
@@ -84,7 +82,6 @@ app.get("/desserts", function (req, res) {
 })
 
 
->>>>>>> 4efaf75d9e100161c63febf38d70cc56dd81b7ef
 
   // Create a new example
   // app.post("/api/examples", function(req, res) {
