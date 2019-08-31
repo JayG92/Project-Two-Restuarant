@@ -190,6 +190,17 @@ ul {
 
 
 /* -- Menu --*/
+.menu-background {
+  background-color: rgb(35, 37, 41);
+  margin-left: -55px;
+  height: auto;
+}
+
+.menu-textadjustment {
+  margin-top: 2%;
+  margin-left: 55px;
+}
+
 .menu-topimage {
   height: 300px;
   width: 100%;
@@ -199,7 +210,8 @@ ul {
   border-top-width: 0px;
 }
 
-.marginMenu {
+.descEdit {
+  font-family: sans-serif;
   margin-bottom: 30px;
 }
 
@@ -212,4 +224,96 @@ ul {
   width: 20%;
   margin-left: 0px;
   margin-top: 0px;
+}
+
+.menu-items1 {
+  position: absolute;
+  right: 5%;
+  width: 360px;
+  height: 270px;
+}
+.menu-items2 {
+  position: absolute;
+  right: 5%;
+  top: 620px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items3 {
+  position: absolute;
+  right: 5%;
+  top: 890px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items4 {
+  position: absolute;
+  right: 5%;
+  top: 1160px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items5 {
+  position: absolute;
+  right: 5%;
+  top: 1430px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items6 {
+  position: absolute;
+  right: 5%;
+  top: 1700px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items7 {
+  position: absolute;
+  right: 5%;
+  top: 1970px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items8 {
+  position: absolute;
+  right: 5%;
+  top: 2240px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items9 {
+  position: absolute;
+  right: 5%;
+  top: 2510px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items10 {
+  position: absolute;
+  right: 5%;
+  top: 2780px;
+  width: 360px;
+  height: 270px;
+}
+
+.order-now {
+  transition: all .2s ease-in-out;
+  z-index: 9999;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 15px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  line-height: 100px;
+  font-size: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(207, 207, 207);
+}
+
+.order-now:hover {
+  transform: scale(1.03);
 }
