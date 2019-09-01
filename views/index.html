@@ -35,7 +35,8 @@
 
 <body>
     <div class="sidebar">
-        <img class="logo" src="images/logoheader.png">
+            <img class="Alogo" src="images/Alogogradient.png">
+            <img class="logo" src="images/Textlogo.png">
         <hr class="hrColor">
         <ul class="menubar text-center">
             <a href="/">
@@ -75,25 +76,43 @@
                 ingredients that you can only experience at Altitude's Steakhouse.</p>
 
             <div class="main-imagecontainer">
-                <img class="mainmenu-sideImage1 shadow" src="images/main-food1.jpg">
+                <!-- <img class="mainmenu-sideImage1 shadow" src="images/main-food1.jpg"> -->
                 <img class="mainmenu-sideImage2 shadow" src="images/main-food2.jpg">
-                <img class="mainmenu-sideImage4 shadow" src="images/main-food4.jpg">
+                <img class="mainmenu-sideImage3 shadow-lg" src="images/main-food3.jpg">
+                <img class="mainmenu-sideImage4 shadow-lg" src="images/main-food4.jpg">
             </div>
-            <div class="main-experience">
-                <h1 style="font-size: 45px">The Altitude Experience</h1>
-                <hr class="hrContent">
+            <div class="main-experience main-experienceBackground">
+                <h1 class="main-experienceTitle" style="font-size: 45px">The Altitude Experience <hr class="hrContent"></h1>
                 <p class="main-experienceText">The luxurious experience of dining at Altitude begins before you even
                     enter the restaurant. Guests are greeted curbside by our valet, and a walk down a red carpet leads
                     into the restaurant. Once inside, lavish six-foot chandeliers draw the eye towards the ceiling, and
                     the leather-embossed walls display classically inspired artwork and black and white family
                     photographs. Marble embossed floors provide an elegant touch to the decor.</p>
             </div>
-            <div class="main-OurMenuBackground">
-                <div class="main-OurMenu text-center">
+            <div class="rowBackground">
+            <div class="row">
+                <div class="col-6">
+            <div class="main-OurMenu">
+                <div class="main-OurMenuBackground text-center shadow">
+                        <div class="main-menuText">
                     <h1 class="text-center">View Our Menu</h1>
-                    <button type="button" class="btn btn-outline-light main-ViewMenuBtn">Menu</button>
+                    <a href="menu"><button type="button" class="btn btn-outline-light main-ViewMenuBtn">View Menu</button></a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="col-6">
+            <div class="main-SetReservation">
+                    <div class="main-SetReservationBackground text-center shadow">
+                        <div class="main-reserveText">
+                        <h1 class="text-center">Reserve Your Table</h1>
+                        <a href="reservations"><button type="button" class="btn btn-outline-light main-ViewMenuBtn">Reserve Table</button></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
             <br>
         </div>
     </div>
