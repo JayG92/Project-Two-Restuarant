@@ -30,7 +30,7 @@
     <!-- Icons -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-    <title>Document</title>
+    <title>Menu</title>
 </head>
 
 
@@ -72,9 +72,12 @@
         <img class="menu-topimage shadow" src="images/menu-top1.jpg">
         <div class="main-topcontent">
             
-            <a href=""><div class="sticky-call text-center shadow-lg animated fadeInUp">Call Us <i class="fas fa-phone"></i></div></a>
-            <a href=""><div class="sticky-email text-center shadow-lg animated fadeInUp">Email Us <i class="fas fa-envelope"></i></div></a>
+            <!--| Quick Options (Start Order, Call, Email) |-->
+            <a href="#"><div class="sticky-call text-center shadow-lg animated fadeInUp">Call Us <i class="fas fa-phone"></i></div></a>
+            <a href="#"><div class="sticky-email text-center shadow-lg animated fadeInUp">Email Us <i class="fas fa-envelope"></i></div></a>
             <a href="order"><div class="sticky-order text-center shadow-lg animated fadeInUp">Start Order <i class="fas fa-shopping-basket"></i></div></a>
+            
+            <!--| Side Images |-->
             <img class="menu-items1 shadow" src="images/menu-items/id1-1.jpg">
             <img class="menu-items2 shadow" src="images/menu-items/id4-1.jpg">
             <img class="menu-items3 shadow" src="images/menu-items/id4-2.jpg">
@@ -87,7 +90,7 @@
             <img class="menu-items10 shadow" src="images/menu-items/id19-2.png">
 
 
-
+            <!--| Menu Items |-->
             <div id="test"></div>
             <h1>Chef's Table</h1>
             <hr class="menu-hr">
@@ -205,6 +208,7 @@
 
                 // Here we then log the tableData to console, where it will show up as an object.
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".featured")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -214,7 +218,7 @@
                     itemDesc.append(
                         $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
@@ -224,6 +228,7 @@
         $.ajax({ url: "/starters", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".starters")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -233,7 +238,7 @@
                     itemDesc.append(
                         $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
@@ -243,6 +248,7 @@
         $.ajax({ url: "/salads-soups", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".salads-soups")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -252,7 +258,7 @@
                     itemDesc.append(
                         $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
@@ -262,6 +268,7 @@
         $.ajax({ url: "/steaks", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".steaks")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -271,7 +278,7 @@
                     itemDesc.append(
                         $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
@@ -281,6 +288,7 @@
         $.ajax({ url: "/sides", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".sides")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -290,7 +298,7 @@
                     itemDesc.append(
                         $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
@@ -300,6 +308,7 @@
         $.ajax({ url: "/desserts", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".desserts")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -309,7 +318,7 @@
                     itemDesc.append(
                         $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc)
 

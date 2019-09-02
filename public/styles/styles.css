@@ -1,3 +1,9 @@
+/* --| Content Box - Line 130 |-- */
+/* --| Experience - Line 200 |-- */
+/* --| Menu - Line 285 |-- */
+/* --| Reservations - Line 450 |-- */
+
+
 html {
   background-color: #2A2C30;
 }
@@ -98,7 +104,8 @@ li {
   border-right-width: 0px;
   border-style: solid;
   border-color: rgb(54, 56, 59);
-  font-family: 'Fjalla One', sans-serif;
+  /* font-family: 'Fjalla One', sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 60px;
 }
 
@@ -116,6 +123,8 @@ li.selected {
 ul {
   display: inline;
 }
+
+
 
 
 
@@ -189,6 +198,7 @@ ul {
   height: 310px;
 }
 
+
 /* -- Experience -- */
 .main-experience {
   background-color: #2A2C30;
@@ -206,7 +216,7 @@ ul {
   margin-top: 50px;
   margin-left: 60px;
   background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
   color: #f1f1f1; /* Grey text */
   padding: 20px; /* Some padding */
   height: 95px;
@@ -218,7 +228,7 @@ ul {
   margin-bottom: 5%;
   margin-left: 60px;
   background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
   color: rgb(179, 151, 118);
   
   font-size: 18px;
@@ -265,19 +275,10 @@ ul {
   border-radius: 30px;
 }
 
-.main-OurMenu:hover {
-  transform: scale(1.02);
-}
-
-.main-SetReservation:hover {
-  transform: scale(1.02);
-}
-
 .rowBackground {
   background-color: rgb(35, 37, 41);
   margin-left: -55px;
 }
-
 
 
 
@@ -305,6 +306,11 @@ ul {
 .descEdit {
   font-family: sans-serif;
   margin-bottom: 30px;
+}
+
+.priceEdit {
+  position: absolute;
+  margin-left: -45px;
 }
 
 .colorTitle {
@@ -441,4 +447,60 @@ ul {
   color: white;
   line-height: 50px;
   background-color: rgb(179, 151, 118);
+}
+
+
+
+
+
+
+
+/* --| Reservations |-- */
+  .formEdit {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 375px) {
+html, body {
+  width: 375px;
+}
+
+  .sidebar {
+    display: none;
+  }
+
+  body {
+    float: left;
+  }
+
+  .main-container {
+    margin-left: 0px;
+  }
+
+  .container {
+    width: 0%;
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+
+  .main-OurMenuBackground {
+    margin-left: -2.5%;
+  }
+
+
+
+
 }

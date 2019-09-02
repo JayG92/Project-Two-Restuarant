@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -19,29 +19,31 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-            <!-- Stylesheet -->
-        <link rel="stylesheet" href="styles/styles.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
 
-        <!-- Custom Font -->
+    <!-- Custom Font -->
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Merriweather+Sans|Roboto:500&display=swap"
         rel="stylesheet">
 
-        <!-- Animate CSS -->
+    <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    
-    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Home</title>
 </head>
 
 
 <body>
     <div class="sidebar">
-            <img class="Alogo" src="images/Alogogradient.png">
-            <img class="logo" src="images/Textlogo.png">
+        <img class="Alogo" src="images/Alogogradient.png">
+        <img class="logo" src="images/Textlogo.png">
         <hr class="hrColor">
         <ul class="menubar text-center">
             <a href="/">
                 <li class="selected">
-                    <div href="#" class="sidebarText">HOME</div>
+                    <div class="sidebarText selected">HOME</div>
                 </li>
             </a>
             <a href="menu">
@@ -66,6 +68,7 @@
             </a>
         </ul>
     </div>
+    <!--| Home - Welcome |-->
     <div class="main-container">
         <img class="mainmenu-image" src="images/topImage.jpg">
         <div class="main-topcontent">
@@ -77,42 +80,49 @@
 
             <div class="main-imagecontainer">
                 <!-- <img class="mainmenu-sideImage1 shadow" src="images/main-food1.jpg"> -->
-                <img class="mainmenu-sideImage2 shadow" src="images/main-food2.jpg">
-                <img class="mainmenu-sideImage3 shadow-lg" src="images/main-food3.jpg">
-                <img class="mainmenu-sideImage4 shadow-lg" src="images/main-food4.jpg">
+                <!-- <img class="mainmenu-sideImage2 shadow" src="images/main-food2.jpg"> -->
+                <img class="mainmenu-sideImage3 shadow-lg animated fadeInUp" src="images/main-food3.jpg">
+                <img class="mainmenu-sideImage4 shadow-lg animated fadeInUp" src="images/main-food4.jpg">
             </div>
+            <!--| Home - Experience |-->
             <div class="main-experience main-experienceBackground">
-                <h1 class="main-experienceTitle" style="font-size: 45px">The Altitude Experience <hr class="hrContent"></h1>
+                <h1 class="main-experienceTitle" style="font-size: 45px">The Altitude Experience
+                    <hr class="hrContent">
+                </h1>
                 <p class="main-experienceText">The luxurious experience of dining at Altitude begins before you even
                     enter the restaurant. Guests are greeted curbside by our valet, and a walk down a red carpet leads
                     into the restaurant. Once inside, lavish six-foot chandeliers draw the eye towards the ceiling, and
                     the leather-embossed walls display classically inspired artwork and black and white family
                     photographs. Marble embossed floors provide an elegant touch to the decor.</p>
             </div>
+
+            <!--| Tabs |-->
             <div class="rowBackground">
-            <div class="row">
-                <div class="col-6">
-            <div class="main-OurMenu">
-                <div class="main-OurMenuBackground text-center shadow">
-                        <div class="main-menuText">
-                    <h1 class="text-center">View Our Menu</h1>
-                    <a href="menu"><button type="button" class="btn btn-outline-light main-ViewMenuBtn">View Menu</button></a>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="main-OurMenu" data-aos="fade-right" data-aos-duration="1500">
+                            <div class="main-OurMenuBackground text-center shadow">
+                                <div class="main-menuText">
+                                    <h1 class="text-center">View Our Menu</h1>
+                                    <a href="menu"><button type="button"
+                                            class="btn btn-outline-light main-ViewMenuBtn">View Menu</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="main-SetReservation" data-aos="fade-left" data-aos-duration="1500">
+                            <div class="main-SetReservationBackground text-center shadow">
+                                <div class="main-reserveText">
+                                    <h1 class="text-center">Reserve Your Table</h1>
+                                    <a href="reservations"><button type="button"
+                                            class="btn btn-outline-light main-ViewMenuBtn">Reserve Table</button></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-6">
-            <div class="main-SetReservation">
-                    <div class="main-SetReservationBackground text-center shadow">
-                        <div class="main-reserveText">
-                        <h1 class="text-center">Reserve Your Table</h1>
-                        <a href="reservations"><button type="button" class="btn btn-outline-light main-ViewMenuBtn">Reserve Table</button></a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
             <br>
         </div>
     </div>
@@ -120,5 +130,6 @@
 
 </body>
 <script src="js/index.js"></script>
+<script>AOS.init();</script>
 
 </html>
