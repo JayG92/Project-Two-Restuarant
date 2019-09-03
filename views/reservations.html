@@ -5,41 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Custom Font -->
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Merriweather+Sans|Roboto:500&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+    <!-- Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <title>Menu</title>
 </head>
+
 
 <body>
     <div class="sidebar">
-        <img class="logo" src="images/logoheader.png">
+        <img class="Alogo" src="images/Alogogradient.png">
+        <img class="logo" src="images/Textlogo.png">
         <hr class="hrColor">
         <ul class="menubar text-center">
             <a href="/">
-                <li class="selected">
-                    <div href="#" class="sidebarText">HOME</div>
+                <li>
+                    <div class="sidebarText">HOME</div>
                 </li>
             </a>
             <a href="menu">
                 <li>
-                    <div class="sidebarText">Our Menu</div>
+                    <div class="sidebarText">OUR MENU</div>
                 </li>
             </a>
             <a href="reservations">
-                <li>
-                    <div class="sidebarText">RESERVATIONS</div>
+                <li class="selected">
+                    <div class="sidebarText selected">RESERVATIONS</div>
                 </li>
             </a>
             <a href="order">
@@ -54,11 +67,13 @@
             </a>
         </ul>
     </div>
+
+
     <div class="main-container">
         <img class="mainmenu-image" src="images/topImage.jpg">
         <div class="main-topcontent">
             <h1 style="font-size: 45px">Altitude Reservations</h1>
-            <h5 style="color: rgb(179, 151, 118);">Prime Steakhouse & Win Bar</h5>
+            <h5 style="color: rgb(179, 151, 118);">Prime Steakhouse & Wine Bar</h5>
             <hr class="hrContent">
 
 
@@ -66,7 +81,7 @@
             <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
-                    <input class="input" type="text" placeholder="Required">
+                    <input class="form-control formEdit input" type="text" placeholder="Required">
                 </div>
             </div>
 
@@ -75,13 +90,7 @@
             <div class="field">
                 <label class="label">Phone Number</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input is-danger" type="input" placeholder="555-555-555" value="">
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
-                    </span>
-                    <span class="icon is-small is-right">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </span>
+                    <input class="form-control formEdit input is-danger" type="input" placeholder="555-555-555" value="">
                 </div>
             </div>
 
@@ -89,7 +98,7 @@
                 <label class="label">Party Size</label>
                 <div class="control">
                     <div class="select">
-                        <select>
+                        <select class="formEdit">
                             <option>Select dropdown</option>
                             <option>1 </option>
                             <option>2 </option>
@@ -106,40 +115,23 @@
                 </div>
             </div>
 
+
             <div class="field">
                 <label class="label">Message</label>
                 <div class="control">
-                    <textarea class="textarea" placeholder="Optional..."></textarea>
+                    <textarea class="form-control formEdit textarea" placeholder="Optional..."></textarea>
                 </div>
             </div>
 
             <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-link">Submit</button>
+                    <button class="btn btn-primary button is-link">Submit</button>
                 </div>
             </div>
-            <!-- FORM END -->
-
-
-
-            <div class="main-experience">
-                <h1 style="font-size: 45px">The Altitude Experience</h1>
-                <hr class="hrContent">
-                <p class="main-experienceText">The luxurious experience of dining at Altitude begins before you even
-                    enter the restaurant. Guests are greeted curbside by our valet, and a walk down a red carpet leads
-                    into the restaurant. Once inside, lavish six-foot chandeliers draw the eye towards the ceiling, and
-                    the leather-embossed walls display classically inspired artwork and black and white family
-                    photographs. Marble embossed floors provide an elegant touch to the decor.</p>
-            </div>
-            <div class="main-OurMenuBackground">
-                <div class="main-OurMenu text-center">
-                    <h1 class="text-center">View Our Menu</h1>
-                    <button type="button" class="btn btn-outline-light main-ViewMenuBtn">Menu</button>
-                </div>
-            </div>
-            <br>
         </div>
     </div>
+
+    <!-- FORM END -->
 
 
 </body>

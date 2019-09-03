@@ -5,10 +5,6 @@ var Sequelize = require("sequelize");
 
 var db = require("./models");
 
-var session = require("express-session");
-// Requiring passport as we've configured it
-var passport = require("./config/passport");
-
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -17,10 +13,6 @@ app.use(express.static("public"));
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-app.use(session({secret: "keyboard cat", resave: true, saveUninitialized: true}));
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Routes
 require("./routes/apiRoutes")(app);
