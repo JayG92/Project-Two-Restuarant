@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <!-- Bootstrap -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -19,102 +17,198 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-            <!-- Stylesheet -->
-        <link rel="stylesheet" href="styles/styles.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
 
-        <!-- Custom Font -->
+    <!-- Custom Font -->
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Merriweather+Sans|Roboto:500&display=swap"
         rel="stylesheet">
 
-        <!-- Animate CSS -->
+    <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    
+
     <title>Document</title>
 </head>
 
 <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Order Here</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                  </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
-                </div>
-              </nav>
 
-
-
-              <div class="sidebar">
-                    <img class="Alogo" src="images/Alogogradient.png">
-                    <img class="logo" src="images/Textlogo.png">
-                    <hr class="hrColor">
-                    <ul class="menubar text-center">
-                        <a href="/">
-                            <li>
-                                <div class="sidebarText">HOME</div>
-                            </li>
-                        </a>
-                        <a href="menu">
-                            <li>
-                                <div class="sidebarText selected">OUR MENU</div>
-                            </li>
-                        </a>
-                        <a href="reservations">
-                            <li>
-                                <div class="sidebarText">RESERVATIONS</div>
-                            </li>
-                        </a>
-                        <a href="order">
-                            <li>
-                                <div class="sidebarOrderOnline">ORDER ONLINE</div>
-                            </li>
-                        </a>
-                        <a href="signup">
-                            <li>
-                                <div class="sidebarSpecials">Sign Up</div>
-                            </li>
-                        </a>
-                    </ul>
-                </div>
+    <div class="sidebar">
+        <img class="Alogo" src="images/Alogogradient.png">
+        <img class="logo" src="images/Textlogo.png">
+        <hr class="hrColor">
+        <ul class="menubar text-center">
+            <a href="/">
+                <li>
+                    <div class="sidebarText">HOME</div>
+                </li>
+            </a>
+            <a href="menu">
+                <li>
+                    <div class="sidebarText selected">OUR MENU</div>
+                </li>
+            </a>
+            <a href="reservations">
+                <li>
+                    <div class="sidebarText">RESERVATIONS</div>
+                </li>
+            </a>
+            <a href="order">
+                <li>
+                    <div class="sidebarOrderOnline">ORDER ONLINE</div>
+                </li>
+            </a>
+            <a href="signup">
+                <li>
+                    <div class="sidebarSpecials">Sign Up</div>
+                </li>
+            </a>
+        </ul>
+    </div>
     <div class="main-container">
         <img class="mainmenu-image" src="images/topImage.jpg">
         <div class="main-topcontent">
 
-            <div class="main-imagecontainer">
-                <img class="mainmenu-sideImage1 shadow" src="images/main-food1.jpg">
-                <img class="mainmenu-sideImage2 shadow" src="images/main-food2.jpg">
-                <img class="mainmenu-sideImage4 shadow" src="images/main-food4.jpg">
+
+            <div class="accordion accordionEdit" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link featured-attr" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                <h4 onclick="featured()">Featured</h4>
+                            </button>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div onclick="select()" class="card-body featured">
+                        </div>
+                    </div>
+                </div>
             </div>
-           
-            <br>
-        </div>
-    </div>
+
+            <div class="accordion accordionEdit" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link starters-attr" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                <h4 onclick="starters()">Starters</h4>
+                            </button>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div onclick="select()" class="card-body starters">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion accordionEdit" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link salads-soups-attr" type="button" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <h4 onclick="saladssoups()">Soups & Salads</h4>
+                                </button>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div onclick="select()" class="card-body salads-soups">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 </body>
+<script>
+
+    function select() {
+        console.log("Added")
+    }
+    function featured() {
+        $.ajax({ url: "/featured", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".featured");
+                    var itemTitle = $("<div>");
+                    itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("descEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+                if ($('.featured-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".featured").empty();
+                }
+            })
+    }
+    function starters() {
+        $.ajax({ url: "/starters", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".starters");
+                    var itemTitle = $("<div>");
+                    itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("descEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+                if ($('.starters-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".starters").empty();
+                }
+            })
+    }
+    function saladssoups() {
+        $.ajax({ url: "/salads-soups", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".salads-soups");
+                    var itemTitle = $("<div>");
+                    itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("descEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+                if ($('.salads-soups-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".salads-soups").empty();
+                }
+            })
+    }
+
+
+</script>
 <script src="js/index.js"></script>
 
 </html>
