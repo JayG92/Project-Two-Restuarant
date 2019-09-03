@@ -111,20 +111,66 @@
                                     <h4 onclick="saladssoups()">Soups & Salads</h4>
                                 </button>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div onclick="select()" class="card-body salads-soups">
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <div class="accordion accordionEdit" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link steaks-attr" type="button" data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        <h4 onclick="steaks()">Steaks</h4>
+                                    </button>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                <div onclick="select()" class="card-body steaks">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordionEdit" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link sides-attr" type="button" data-toggle="collapse"
+                                            data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                            <h4 onclick="sides()">Sides</h4>
+                                        </button>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div onclick="select()" class="card-body sides">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion accordionEdit" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingSix">
+                                        <h2 class="mb-0">
+                                            <button class="btn btn-link sides-attr" type="button" data-toggle="collapse"
+                                                data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                <h4 onclick="desserts()">Desserts</h4>
+                                            </button>
+                                    </div>
+                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                                        <div onclick="select()" class="card-body desserts">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
 </body>
 <script>
-
-    function select() {
-        console.log("Added")
-    }
+var order_items = [];
+    function select() {}
     function featured() {
         $.ajax({ url: "/featured", method: "GET" })
             .then(function (result) {
@@ -134,24 +180,28 @@
                     var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".featured");
                     var itemTitle = $("<div>");
-                    itemTitle.append(
-                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                            itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("descEdit")
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
                     )
                     menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
-
                 }
+                $(".order-TitleEdit").click(function() {
+                    console.log(this.innerText)
+                    console.log(price)
+                })
+                
                 if ($('.featured-attr').attr('aria-expanded') === "false") {
                     console.log("cleared");
                     $(".featured").empty();
                 }
             })
-    }
+        }
     function starters() {
         $.ajax({ url: "/starters", method: "GET" })
             .then(function (result) {
@@ -161,18 +211,20 @@
                     var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".starters");
                     var itemTitle = $("<div>");
-                    itemTitle.append(
-                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                            itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("descEdit")
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
                     )
                     menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
-
                 }
+                $(".order-TitleEdit").click(function() {
+                    console.log(this.innerText)
+                })
                 if ($('.starters-attr').attr('aria-expanded') === "false") {
                     console.log("cleared");
                     $(".starters").empty();
@@ -189,20 +241,118 @@
                     var menuItem = $(".salads-soups");
                     var itemTitle = $("<div>");
                     itemTitle.append(
-                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("descEdit")
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
                     )
                     menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
                 }
+                $(".order-TitleEdit").click(function() {
+                    console.log(this.innerText)
+                })
+
                 if ($('.salads-soups-attr').attr('aria-expanded') === "false") {
                     console.log("cleared");
                     $(".salads-soups").empty();
+                }
+            })
+    }
+
+    function steaks() {
+        $.ajax({ url: "/steaks", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".steaks");
+                    var itemTitle = $("<div>");
+                            itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+                $(".order-TitleEdit").click(function() {
+                    console.log(this.innerText)
+                })
+
+                if ($('.steaks-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".steaks").empty();
+                }
+            })
+    }
+
+    function sides() {
+        $.ajax({ url: "/sides", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".sides");
+                    var itemTitle = $("<div>");
+                            itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+                }
+                $(".order-TitleEdit").click(function() {
+                    console.log(this.innerText)
+                })
+
+                if ($('.sides-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".sides").empty();
+                }
+            })
+    }
+
+    function desserts() {
+        $.ajax({ url: "/desserts", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".desserts");
+                    var itemTitle = $("<div>");
+                            itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+                }
+                $(".order-TitleEdit").click(function() {
+                    console.log(this.innerText)
+                })
+
+                if ($('.desserts-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".desserts").empty();
                 }
             })
     }

@@ -315,7 +315,6 @@ ul {
 
 .colorTitle {
   color: rgb(179, 151, 118);
-  line-height: 5px;
 }
 
 .menu-hr {
@@ -463,12 +462,25 @@ ul {
   }
 
 
+
+/* --| Order Online |-- */
   .accordionEdit {
-    width: 80%;
+    width: 60%;
   }
 
   .order-starters {
     color: #2A2C30;
+  }
+
+  .order-TitleEdit {
+    line-height: 5px;
+    color: rgb(179, 151, 118);
+  }
+  
+  .order-DescEdit {
+    color: #2A2C30;
+    font-family: sans-serif;
+    margin-bottom: 20px;
   }
 
 
