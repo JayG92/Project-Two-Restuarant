@@ -26,14 +26,18 @@
 
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    
+    <!-- Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-    <title>Document</title>
+    <title>Menu</title>
 </head>
 
 
 <body>
     <div class="sidebar">
-        <img class="logo" src="images/logoheader.png">
+        <img class="Alogo" src="images/Alogogradient.png">
+        <img class="logo" src="images/Textlogo.png">
         <hr class="hrColor">
         <ul class="menubar text-center">
             <a href="/">
@@ -41,35 +45,55 @@
                     <div class="sidebarText">HOME</div>
                 </li>
             </a>
-            <a href="#">
+            <a href="menu">
                 <li class="selected">
                     <div class="sidebarText selected">OUR MENU</div>
                 </li>
             </a>
-            <a href="#">
+            <a href="reservations">
                 <li>
                     <div class="sidebarText">RESERVATIONS</div>
                 </li>
             </a>
-            <a href="#">
+            <a href="order">
                 <li>
                     <div class="sidebarOrderOnline">ORDER ONLINE</div>
                 </li>
             </a>
-            <a href="signup.html">
+            <a href="signup">
                 <li>
                     <div class="sidebarSpecials">Sign Up</div>
                 </li>
             </a>
         </ul>
     </div>
+
     <div class="main-container">
-        <img class="menu-topimage" src="images/menu-top1.jpg">
+        <img class="menu-topimage shadow" src="images/menu-top1.jpg">
         <div class="main-topcontent">
+            
+            <!--| Quick Options (Start Order, Call, Email) |-->
+            <a href="#"><div class="sticky-call text-center shadow-lg animated fadeInUp">Call Us <i class="fas fa-phone"></i></div></a>
+            <a href="#"><div class="sticky-email text-center shadow-lg animated fadeInUp">Email Us <i class="fas fa-envelope"></i></div></a>
+            <a href="order"><div class="sticky-order text-center shadow-lg animated fadeInUp">Start Order <i class="fas fa-shopping-basket"></i></div></a>
+            
+            <!--| Side Images |-->
+            <img class="menu-items1 shadow" src="images/menu-items/id1-1.jpg">
+            <img class="menu-items2 shadow" src="images/menu-items/id4-1.jpg">
+            <img class="menu-items3 shadow" src="images/menu-items/id4-2.jpg">
+            <img class="menu-items4 shadow" src="images/menu-items/id7-1.jpg">
+            <img class="menu-items5 shadow" src="images/menu-items/id10-1.jpg">
+            <img class="menu-items6 shadow" src="images/menu-items/id11-3.png">
+            <img class="menu-items7 shadow" src="images/menu-items/id11-2.jpg">
+            <img class="menu-items8 shadow" src="images/menu-items/id15-1.jpg">
+            <img class="menu-items9 shadow" src="images/menu-items/id15-2.png">
+            <img class="menu-items10 shadow" src="images/menu-items/id19-2.png">
+
+
+            <!--| Menu Items |-->
             <div id="test"></div>
             <h1>Chef's Table</h1>
             <hr class="menu-hr">
-            <br>
             <div class="row">
                 <div class="col-6">
                     <ul class="list-unstyled">
@@ -83,81 +107,93 @@
             </div>
 
             <hr>
-            <h1>Starters</h1>
+            <div class="menu-background">
+                <div class="menu-textadjustment">
+                    <h1>Starters</h1>
+                    <hr class="menu-hr">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="media limenu">
+                                    <img src="" class="mr-3" alt="">
+                                    <div class="media-body starters">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h1>Salads & Soups</h1>
             <hr class="menu-hr">
-            <br>
             <div class="row">
                 <div class="col-6">
                     <ul class="list-unstyled">
                         <li class="media limenu">
                             <img src="" class="mr-3" alt="">
-                            <div class="media-body starters">
+                            <div class="media-body salads-soups">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+            <div class="menu-background">
+                <div class="menu-textadjustment">
+                    <h1>Signature Steaks</h1>
+                    <hr class="menu-hr">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="media limenu">
+                                    <img src="" class="mr-3" alt="">
+                                    <div class="media-body steaks">
+                                    </div>
+                                </li>
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h1>Sides</h1>
+            <hr class="menu-hr">
+            <div class="row">
+                <div class="col-6">
+                    <ul class="list-unstyled">
+                        <li class="media limenu">
+                            <img src="" class="mr-3" alt="">
+                            <div class="media-body sides">
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
             <hr>
-            <h1>Salads & Soups</h1>
-            <hr class="menu-hr">
-            <br>
-            <div class="row">
-                    <div class="col-6">
-                        <ul class="list-unstyled">
-                            <li class="media limenu">
-                                <img src="" class="mr-3" alt="">
-                                <div class="media-body salads-soups">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            <hr>
-            <h1>Signature Steaks</h1>
-            <hr class="menu-hr">
-            <br>
-            <div class="row">
-                    <div class="col-6">
-                        <ul class="list-unstyled">
-                            <li class="media limenu">
-                                <img src="" class="mr-3" alt="">
-                                <div class="media-body steaks">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <h1>Sides</h1>
-                <hr class="menu-hr">
-                <br>
-                <div class="row">
+            <div class="menu-background">
+                <div class="menu-textadjustment">
+                    <h1>Desserts</h1>
+                    <hr class="menu-hr">
+                    <div class="row">
                         <div class="col-6">
                             <ul class="list-unstyled">
                                 <li class="media limenu">
                                     <img src="" class="mr-3" alt="">
-                                    <div class="media-body sides">
+                                    <div class="media-body desserts">
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <hr>
-                    <h1>Desserts</h1>
-                    <hr class="menu-hr">
-                    <br>
-                    <div class="row">
-                            <div class="col-6">
-                                <ul class="list-unstyled">
-                                    <li class="media limenu">
-                                        <img src="" class="mr-3" alt="">
-                                        <div class="media-body desserts">
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<br>
 
 
 
@@ -172,6 +208,7 @@
 
                 // Here we then log the tableData to console, where it will show up as an object.
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".featured")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -179,9 +216,9 @@
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                        $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
@@ -191,6 +228,7 @@
         $.ajax({ url: "/starters", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".starters")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -198,18 +236,19 @@
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                        $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
                 }
             })
 
-            $.ajax({ url: "/salads-soups", method: "GET" })
+        $.ajax({ url: "/salads-soups", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".salads-soups")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -217,18 +256,19 @@
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                        $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
                 }
             })
 
-            $.ajax({ url: "/steaks", method: "GET" })
+        $.ajax({ url: "/steaks", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".steaks")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -236,18 +276,19 @@
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                        $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
                 }
             })
 
-            $.ajax({ url: "/sides", method: "GET" })
+        $.ajax({ url: "/sides", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".sides")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -255,18 +296,19 @@
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                        $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
                 }
             })
 
-            $.ajax({ url: "/desserts", method: "GET" })
+        $.ajax({ url: "/desserts", method: "GET" })
             .then(function (result) {
                 for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
                     var menuItem = $(".desserts")
                     var itemTitle = $("<div class='mt-0 mb-1'>");
                     itemTitle.append(
@@ -274,9 +316,9 @@
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("marginMenu")
+                        $("<h6>").text(result[i].description).addClass("descEdit")
                     )
-
+                    menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc)
 

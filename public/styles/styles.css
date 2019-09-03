@@ -1,12 +1,21 @@
+/* --| Content Box - Line 130 |-- */
+/* --| Experience - Line 200 |-- */
+/* --| Menu - Line 285 |-- */
+/* --| Reservations - Line 450 |-- */
+
+
 html {
   background-color: #2A2C30;
 }
 
 body {
   background-color: rgb(59, 59, 63);
+  overflow-x: hidden;
+  height: auto;
 }
 
 .sidebar {
+  z-index: 2;
   position: fixed;
   width: 320px;
   min-height:100vh;
@@ -40,12 +49,28 @@ body {
   font-size: 15px;
 }
 
-.logo {
+/* .logo {
   margin-left: 5%;
   margin-top: 25%;
   margin-bottom: 5%;
   width: 275px;
   height: 200px;
+} */
+
+.logo {
+  margin-left: 10%;
+  margin-top: 9%;
+  margin-bottom: 5%;
+  width: 260px;
+  height: 80px;
+}
+
+.Alogo {
+  margin-left: 35%;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  width: 130px;
+  height: 130px;
 }
 
 .hrColor {
@@ -79,7 +104,8 @@ li {
   border-right-width: 0px;
   border-style: solid;
   border-color: rgb(54, 56, 59);
-  font-family: 'Fjalla One', sans-serif;
+  /* font-family: 'Fjalla One', sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 60px;
 }
 
@@ -97,6 +123,8 @@ li.selected {
 ul {
   display: inline;
 }
+
+
 
 
 
@@ -140,13 +168,22 @@ ul {
   display: inline;
   top: 575px;
 }
-.mainmenu-sideImage4 {
+.mainmenu-sideImage3 {
+  z-index: 0;
   position: absolute;
-  right: 345px;
+  right: 560px;
   display: inline;
   top: 575px;
-  height: 288px;
-  width: 570px;
+  height: 284px;
+  width: 560px;
+}
+.mainmenu-sideImage4 {
+  position: absolute;
+  right: 0px;
+  display: inline;
+  top: 575px;
+  height: 284px;
+  width: 560px;
 }
 
 .hrContent {
@@ -154,24 +191,50 @@ ul {
   width: 20%;
   left: 0%;
   margin-left: 0px;
+  margin-left: 0px;
 }
 
 .main-imagecontainer {
-  height: 400px;
+  height: 310px;
 }
 
+
 /* -- Experience -- */
+.main-experience {
+  background-color: #2A2C30;
+  margin-left: -60px;
+}
+
+.main-experienceBackground {
+  height: 500px;
+  background-image: url(../images/index-bg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-experienceTitle {
+  margin-top: 50px;
+  margin-left: 60px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  padding: 20px; /* Some padding */
+  height: 95px;
+  margin-right: 5%;
+}
 .main-experienceText {
   letter-spacing: 1px;
   color: rgb(179, 151, 118);
   margin-bottom: 5%;
-}
-
-.main-OurMenu {
-  padding: 1.5rem 2rem;
-  margin-top: 5%;
-  background-color: #696058;
-  margin-left: 5%;
+  margin-left: 60px;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.8); /* Black background with 0.5 opacity */
+  color: rgb(179, 151, 118);
+  
+  font-size: 18px;
+  padding: 20px; /* Some padding */
+  height: 165px;
+  margin-top: -8px;
   margin-right: 5%;
 }
 
@@ -180,16 +243,57 @@ ul {
   width: 30%;
 }
 
+.main-menuText {
+  padding-top: 100px;
+}
+
 .main-OurMenuBackground {
-  height: 275px; /* 275px */
-  margin-left: -55px;
+  margin-left: 50px;
+  margin-top: 10%;
+  background-image: url(../images/index-menu.jpg);
+  height: 380px;
+  width: 500px;
+  border-radius: 30px;
+}
+
+.main-SetReservation {
+  margin-right: 10%;
+}
+
+.main-reserveText {
+  padding-top: 100px;
+}
+
+.main-SetReservationBackground {
+  box-shadow: 5px 10px 8px #888888;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-image: url(../images/index-reservation.jpg);
+  height: 380px;
+  width: 500px;
+  margin-left: -2.5%;
+  border-radius: 30px;
+}
+
+.rowBackground {
   background-color: rgb(35, 37, 41);
+  margin-left: -55px;
 }
 
 
 
-
 /* -- Menu --*/
+.menu-background {
+  background-color: rgb(35, 37, 41);
+  margin-left: -55px;
+  height: auto;
+}
+
+.menu-textadjustment {
+  margin-top: 2%;
+  margin-left: 55px;
+}
+
 .menu-topimage {
   height: 300px;
   width: 100%;
@@ -199,8 +303,14 @@ ul {
   border-top-width: 0px;
 }
 
-.marginMenu {
+.descEdit {
+  font-family: sans-serif;
   margin-bottom: 30px;
+}
+
+.priceEdit {
+  position: absolute;
+  margin-left: -45px;
 }
 
 .colorTitle {
@@ -212,4 +322,185 @@ ul {
   width: 20%;
   margin-left: 0px;
   margin-top: 0px;
+}
+
+.menu-items1 {
+  position: absolute;
+  right: 5%;
+  width: 360px;
+  height: 270px;
+}
+.menu-items2 {
+  position: absolute;
+  right: 5%;
+  top: 620px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items3 {
+  position: absolute;
+  right: 5%;
+  top: 890px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items4 {
+  position: absolute;
+  right: 5%;
+  top: 1160px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items5 {
+  position: absolute;
+  right: 5%;
+  top: 1430px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items6 {
+  position: absolute;
+  right: 5%;
+  top: 1700px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items7 {
+  position: absolute;
+  right: 5%;
+  top: 1970px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items8 {
+  position: absolute;
+  right: 5%;
+  top: 2240px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items9 {
+  position: absolute;
+  right: 5%;
+  top: 2510px;
+  width: 360px;
+  height: 270px;
+}
+.menu-items10 {
+  position: absolute;
+  right: 5%;
+  top: 2780px;
+  width: 360px;
+  height: 270px;
+}
+
+.sticky-order {
+  transition: all .2s ease-in-out;
+  z-index: 9999;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 15px;
+  width: 300px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  line-height: 100px;
+  font-size: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(207, 207, 207);
+}
+
+.sticky-order:hover {
+  transform: scale(1.03);
+}
+
+.sticky-call {
+  transition: all .2s ease-in-out;
+  z-index: 9999;
+  position: fixed;
+  bottom: 9%;
+  right: 24%;
+  border-radius: 15px;
+  width: 120px;
+  height: 45px;
+  color: white;
+  line-height: 50px;
+  background-color: rgb(179, 151, 118);
+}
+
+.sticky-call:hover, .sticky-email:hover {
+  color: rgb(196, 196, 196);
+  background-color: rgb(163, 136, 105);
+}
+
+.sticky-email {
+  transition: all .2s ease-in-out;
+  z-index: 9999;
+  position: fixed;
+  bottom: 2%;
+  right: 24%;
+  border-radius: 15px;
+  width: 120px;
+  height: 45px;
+  color: white;
+  line-height: 50px;
+  background-color: rgb(179, 151, 118);
+}
+
+
+
+
+
+
+
+/* --| Reservations |-- */
+  .formEdit {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 375px) {
+html, body {
+  width: 375px;
+}
+
+  .sidebar {
+    display: none;
+  }
+
+  body {
+    float: left;
+  }
+
+  .main-container {
+    margin-left: 0px;
+  }
+
+  .container {
+    width: 0%;
+    padding-left: 0%;
+    margin-left: 0%;
+  }
+
+  .main-OurMenuBackground {
+    margin-left: -2.5%;
+  }
+
+
+
+
 }
