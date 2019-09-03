@@ -35,7 +35,7 @@ if (process.env.NODE_ENV === "test") {
 //   database: "project_two"
 // });
 
-var sequelize = new Sequelize("sequelize_menu", "root", "root", {
+var sequelize = new Sequelize("sequelize_menu", "root", "", {
   host: "localhost",
   port: 3306,
   dialect: "mysql",
