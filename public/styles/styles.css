@@ -315,6 +315,7 @@ ul {
 
 .colorTitle {
   color: rgb(179, 151, 118);
+  line-height: 5px;
 }
 
 .menu-hr {
@@ -461,6 +462,14 @@ ul {
     margin-bottom: 20px;
   }
 
+
+  .accordionEdit {
+    width: 80%;
+  }
+
+  .order-starters {
+    color: #2A2C30;
+  }
 
 
 
