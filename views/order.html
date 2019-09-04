@@ -27,6 +27,10 @@
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
+    <!-- Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+
     <title>Document</title>
 </head>
 
@@ -45,7 +49,7 @@
             </a>
             <a href="menu">
                 <li>
-                    <div class="sidebarText selected">OUR MENU</div>
+                    <div class="sidebarText">OUR MENU</div>
                 </li>
             </a>
             <a href="reservations">
@@ -54,7 +58,7 @@
                 </li>
             </a>
             <a href="order">
-                <li>
+                <li class="selected-order">
                     <div class="sidebarOrderOnline">ORDER ONLINE</div>
                 </li>
             </a>
@@ -69,62 +73,144 @@
         <img class="mainmenu-image" src="images/topImage.jpg">
         <div class="main-topcontent">
 
-
-            <div class="accordion accordionEdit" id="accordionExample">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link featured-attr" type="button" data-toggle="collapse" data-target="#collapseOne"
-                                aria-expanded="true" aria-controls="collapseOne">
-                                <h4 onclick="featured()">Featured</h4>
-                            </button>
-                    </div>
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div onclick="select()" class="card-body featured">
+            <div class="row">
+                <div class="col">
+                    <div class="accordion accordionEdit" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link featured-attr" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 onclick="featured()">Featured <img style="width: 12px;"
+                                                src="../images/drop-down-arrow.png"> </h4>
+                                    </button>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div onclick="select()" class="card-body featured">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="accordion accordionEdit" id="accordionExample">
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link starters-attr" type="button" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                <h4 onclick="starters()">Starters</h4>
-                            </button>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div onclick="select()" class="card-body starters">
+                    <div class="accordion accordionEdit" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link starters-attr" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        <h4 onclick="starters()">Starters <img style="width: 12px;"
+                                                src="../images/drop-down-arrow.png"></h4>
+                                    </button>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div onclick="select()" class="card-body starters">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="accordion accordionEdit" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link salads-soups-attr" type="button" data-toggle="collapse"
-                                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                    <h4 onclick="saladssoups()">Soups & Salads</h4>
-                                </button>
+                    <div class="accordion accordionEdit" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link salads-soups-attr" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                        <h4 onclick="saladssoups()">Soups & Salads <img style="width: 12px;"
+                                                src="../images/drop-down-arrow.png"></h4>
+                                    </button>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div onclick="select()" class="card-body salads-soups">
+                                </div>
+                            </div>
                         </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div onclick="select()" class="card-body salads-soups">
+                    </div>
+
+                    <div class="accordion accordionEdit" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link steaks-attr" type="button" data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                        <h4 onclick="steaks()">Steaks <img style="width: 12px;"
+                                                src="../images/drop-down-arrow.png"></h4>
+                                    </button>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordionExample">
+                                <div onclick="select()" class="card-body steaks">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordionEdit" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link sides-attr" type="button" data-toggle="collapse"
+                                        data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                        <h4 onclick="sides()">Sides <img style="width: 12px;"
+                                                src="../images/drop-down-arrow.png"></h4>
+                                    </button>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-parent="#accordionExample">
+                                <div onclick="select()" class="card-body sides">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordionEdit" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingSix">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link sides-attr" type="button" data-toggle="collapse"
+                                        data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                        <h4 onclick="desserts()">Desserts <img style="width: 12px;"
+                                                src="../images/drop-down-arrow.png"></h4>
+                                    </button>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                data-parent="#accordionExample">
+                                <div onclick="select()" class="card-body desserts">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col">
+                    <div class="order-box shadow-lg p-3 mb-5 bg-white rounded text-center">
+                        <h4>Order List</h4>
+                        <hr>
+                        <div id="clickedOrders">
+                            <div id="order-list">
+                                <div class="order-listempty">Add an item to your order!</div>
+                            </div>
+                            <hr>
+                            <button type="button" class="btn btn-light order-empty">Empty</button>
+                            <button type="button" class="btn btn-primary order-submitbtn">Submit Order</button>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 </body>
 <script>
+    var order_items = [];
+    var cpt = 0;
+    function select() { $("#order-listempty").hide(); }
 
-    function select() {
-        console.log("Added")
-    }
     function featured() {
         $.ajax({ url: "/featured", method: "GET" })
             .then(function (result) {
@@ -135,23 +221,54 @@
                     var menuItem = $(".featured");
                     var itemTitle = $("<div>");
                     itemTitle.append(
-                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("descEdit")
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
                     )
                     menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
-
                 }
+                $("#order-list").click(function () {
+                    order_items.splice(this, 1);
+                })
+
+                $(".order-empty").click(function () {
+                    order_items.splice(this);
+                    $("#order-list").empty();
+
+                    // if (order_items.length === 0) {
+                    //     $("#order-listempty").hide();
+                    // } else {
+                    //     $("#order-listempty").show();
+                    // }
+                })
+
+                $(".order-TitleEdit").click(function () {
+                    console.log(order_items)
+                    console.log(this.innerText);
+                    order_items.push(this.innerText);
+
+                    var e = "";
+                    for (var y = 0; y < order_items.length; y++) {
+                        e += order_items[y] + "<div>" + "<br/>";
+                    }
+                    document.getElementById("order-list").innerHTML = e;
+                })
+
+
+
                 if ($('.featured-attr').attr('aria-expanded') === "false") {
                     console.log("cleared");
                     $(".featured").empty();
                 }
             })
     }
+
+
+
     function starters() {
         $.ajax({ url: "/starters", method: "GET" })
             .then(function (result) {
@@ -162,17 +279,19 @@
                     var menuItem = $(".starters");
                     var itemTitle = $("<div>");
                     itemTitle.append(
-                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("descEdit")
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
                     )
                     menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
-
                 }
+                $(".order-TitleEdit").click(function () {
+                    console.log(this.innerText)
+                })
                 if ($('.starters-attr').attr('aria-expanded') === "false") {
                     console.log("cleared");
                     $(".starters").empty();
@@ -189,20 +308,118 @@
                     var menuItem = $(".salads-soups");
                     var itemTitle = $("<div>");
                     itemTitle.append(
-                        $("<h4>").text(result[i].name).addClass("colorTitle")
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
                     );
                     var itemDesc = $("<div>");
                     itemDesc.append(
-                        $("<h6>").text(result[i].description).addClass("descEdit")
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
                     )
                     menuItem.append(price);
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
 
                 }
+                $(".order-TitleEdit").click(function () {
+                    console.log(this.innerText)
+                })
+
                 if ($('.salads-soups-attr').attr('aria-expanded') === "false") {
                     console.log("cleared");
                     $(".salads-soups").empty();
+                }
+            })
+    }
+
+    function steaks() {
+        $.ajax({ url: "/steaks", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".steaks");
+                    var itemTitle = $("<div>");
+                    itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+
+                }
+                $(".order-TitleEdit").click(function () {
+                    console.log(this.innerText)
+                })
+
+                if ($('.steaks-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".steaks").empty();
+                }
+            })
+    }
+
+    function sides() {
+        $.ajax({ url: "/sides", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".sides");
+                    var itemTitle = $("<div>");
+                    itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+                }
+                $(".order-TitleEdit").click(function () {
+                    console.log(this.innerText)
+                })
+
+                if ($('.sides-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".sides").empty();
+                }
+            })
+    }
+
+    function desserts() {
+        $.ajax({ url: "/desserts", method: "GET" })
+            .then(function (result) {
+
+                // Here we then log the tableData to console, where it will show up as an object.
+                for (i = 0; i < result.length; i++) {
+                    var price = $("<h5>").text(result[i].price).addClass("priceEdit");
+                    var menuItem = $(".desserts");
+                    var itemTitle = $("<div>");
+                    itemTitle.append(
+                        $("<h4>").text(result[i].name).addClass("order-TitleEdit")
+                    );
+                    var itemDesc = $("<div>");
+                    itemDesc.append(
+                        $("<h6>").text(result[i].description).addClass("order-DescEdit")
+                    )
+                    menuItem.append(price);
+                    menuItem.append(itemTitle);
+                    menuItem.append(itemDesc);
+                }
+                $(".order-TitleEdit").click(function () {
+                    console.log(this.innerText)
+                })
+
+                if ($('.desserts-attr').attr('aria-expanded') === "false") {
+                    console.log("cleared");
+                    $(".desserts").empty();
                 }
             })
     }
