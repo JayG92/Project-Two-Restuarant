@@ -26,7 +26,7 @@
 
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    
+
     <!-- Icons -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
@@ -79,73 +79,129 @@
 
             <!-- FORM START -->
             <div class="container">
-            <div class="row">
-                <div class="col-6">
-            <div class="field">
-                <label class="label">Name</label>
-                <div class="control">
-                    <input class="form-control formEdit input" type="text" placeholder="Required">
-                </div>
-            </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="field">
+                            <label class="name">Name</label>
+                            <div class="control">
+                                <input class="form-control formEdit input res-name" type="text" placeholder="Required">
+                            </div>
+                        </div>
 
 
 
-            <div class="field">
-                <label class="label">Phone Number</label>
-                <div class="control has-icons-left has-icons-right">
-                    <input class="form-control formEdit input is-danger" type="input" placeholder="555-555-555" value="">
-                </div>
-            </div>
+                        <div class="field">
+                            <label class="label">Phone Number</label>
+                            <div class="control has-icons-left has-icons-right">
+                                <input class="form-control formEdit input is-danger res-phone" type="input"
+                                    placeholder="555-555-555" value="">
+                            </div>
+                        </div>
 
-            <div class="field">
-                <label class="label">Party Size</label>
-                <div class="control">
-                    <div class="select">
-                        <select class="formEdit">
-                            <option>Select dropdown</option>
-                            <option>1 </option>
-                            <option>2 </option>
-                            <option>3 </option>
-                            <option>4 </option>
-                            <option>5 </option>
-                            <option>6 </option>
-                            <option>7 </option>
-                            <option>8 </option>
-                            <option>9 </option>
-                            <option>10+</option>
-                        </select>
+                        <div class="field">
+                            <label class="label">Party Size</label>
+                            <div class="control">
+                                <div class="select">
+                                    <select class="formEdit res-party">
+                                        <option>Select dropdown</option>
+                                        <option>1 </option>
+                                        <option>2 </option>
+                                        <option>3 </option>
+                                        <option>4 </option>
+                                        <option>5 </option>
+                                        <option>6 </option>
+                                        <option>7 </option>
+                                        <option>8 </option>
+                                        <option>9 </option>
+                                        <option>10+</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control">
+                                <textarea class="form-control formEdit textarea res-message"
+                                    placeholder="Optional..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="btn btn-primary button is-link res-submit">Submit</button>
+                            </div>
+                        </div>
                     </div>
+                    <!-- FORM END -->
+                    <div class="col">
+                        <div class="reservation-set text-center shadow-lg p-3 mb-5 bg-white rounded">
+                            <h2 class="res-title">Reservation Set!</h2>
+                            <h6 class="res-subtext">We will let you know when your table is ready!</h6>
+                        </div>
+                        <div class="reservation-set text-center shadow-lg p-3 mb-5 bg-white rounded">
+                            <h5 class="res-details">Reservation Details</h5>
+                            <hr>
+                            <div class="res-detailsinfo text-center">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
 
-            <div class="field">
-                <label class="label">Message</label>
-                <div class="control">
-                    <textarea class="form-control formEdit textarea" placeholder="Optional..."></textarea>
-                </div>
-            </div>
-
-            <div class="field is-grouped">
-                <div class="control">
-                    <button class="btn btn-primary button is-link">Submit</button>
-                </div>
-            </div>
         </div>
-    <!-- FORM END -->
-<div class="col">
-    <div class="reservation-set text-center">
-        <h2>Reservation Set!</h2>
-        
     </div>
-</div>
-
-
-</div>
-</div>
 
 
 </body>
+<script>
+    $(".res-submit").click(function () {
+        var form_name = $(".res-name").val();
+        var form_phone = $(".res-phone").val();
+        var form_party = $(".res-party").val();
+        var form_message = $(".res-message").val()
+
+        var details = $(".res-detailsinfo");
+
+        details.append("Name: " + form_name + "<br>");
+        details.append("Phone: " + form_phone + "<br>");
+        details.append("Party Size: " + form_party + "<br>");
+        details.append("Message: " + form_message + "<br>");
+
+
+    //     function signUpUser(email, password) {
+    // $.post("/reservations", {
+    //     name: form_name,
+    //     email: form_phone,
+    //     party: form_party,
+    //     message: form_message
+    // })
+    //   .then(function(data) {
+    //       console.log("Submitted!")
+    //     window.location.replace("/");
+    //   })
+    // }
+        $.ajax({
+            url: 'reservations',
+            method: 'POST',
+            data: {
+                name: form_name,
+                phone: form_phone,
+                party: form_party,
+                message: form_message
+            },
+            success: function (data) {
+                alert(data);
+            }
+        });
+    })
+
+
+
+</script>
 <script src="js/index.js"></script>
 
 </html>
