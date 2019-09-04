@@ -116,6 +116,12 @@ li.selected {
   border-right-color: rgb(179, 151, 118);
 }
 
+li.selected-order {
+  margin-left: 4px;
+  border-right-width: 4px;
+  border-right-color: rgb(201, 85, 85);
+}
+
 .selected {
   color: rgb(179, 151, 118);
 }
@@ -457,7 +463,7 @@ ul {
 
 /* --| Reservations |-- */
   .formEdit {
-    width: 30%;
+    width: 100%;
     margin-bottom: 20px;
   }
 
@@ -465,7 +471,11 @@ ul {
 
 /* --| Order Online |-- */
   .accordionEdit {
-    width: 60%;
+    width: 130%;
+  }
+
+  .card-body {
+    margin-bottom: -20px;
   }
 
   .order-starters {
@@ -483,6 +493,34 @@ ul {
     margin-bottom: 20px;
   }
 
+.order-box {
+  border-radius: 10px;
+  color: #2A2C30;
+  position: absolute;
+  width: 60%;
+  right: 10%;
+  height: auto;
+}
+
+#clickedOrders {
+  font-size: 13px;
+}
+
+#dropdown {
+  background-image: url(../images/drop-down-arrow.png)
+}
+
+h4 {
+  color: #2A2C30;
+}
+
+.order-submitbtn {
+  width: 70%;
+}
+
+.order-empty {
+  background-color: rgb(214, 214, 214);
+}
 
 
 
