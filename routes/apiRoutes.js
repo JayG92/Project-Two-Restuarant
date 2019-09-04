@@ -89,5 +89,16 @@ module.exports = function (app) {
     });
   })
 
+app.post("/reservations", function (req, res) {
+  db.reservations.create({
+    name: req.body.name,
+    phone: req.body.phone,
+    party: req.body.party,
+    message: req.body.message,
+  }).then(function() {
+    // res.redirect(307, "/reservations");
+  })
+})
+
 };
 

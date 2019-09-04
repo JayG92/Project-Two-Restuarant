@@ -467,6 +467,22 @@ ul {
     margin-bottom: 20px;
   }
 
+  .reservation-set {
+    width: 95%;
+  }
+
+  .res-title, .res-subtext, .res-details {
+    color: #2A2C30;
+  }
+
+  .res-detailsinfo {
+    color: #2A2C30;
+  }
+
+  .bold {
+    font-size: 30px;
+  }
+
 
 
 /* --| Order Online |-- */
@@ -520,6 +536,10 @@ h4 {
 
 .order-empty {
   background-color: rgb(214, 214, 214);
+}
+
+.res-party {
+  height: 40px;
 }
 
 

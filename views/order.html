@@ -188,8 +188,10 @@
                         <h4>Order List</h4>
                         <hr>
                         <div id="clickedOrders">
-                            <div id="order-list">
                                 <div class="order-listempty">Add an item to your order!</div>
+                            <div id="order-list">
+
+        
                             </div>
                             <hr>
                             <button type="button" class="btn btn-light order-empty">Empty</button>
@@ -203,13 +205,14 @@
             </div>
         </div>
     </div>
+    <br>
 
 
 </body>
 <script>
     var order_items = [];
     var cpt = 0;
-    function select() { $("#order-listempty").hide(); }
+    function select() { $(".order-listempty").hide(); }
 
     function featured() {
         $.ajax({ url: "/featured", method: "GET" })
@@ -231,6 +234,20 @@
                     menuItem.append(itemTitle);
                     menuItem.append(itemDesc);
                 }
+
+                $(".order-TitleEdit").click(function () {
+                    console.log(order_items)
+                    console.log(this.innerText);
+                    order_items.push(this.innerText);
+                    
+
+                    var e = "";
+                    for (var y = 0; y < order_items.length; y++) {
+                        e += order_items[y] + "<div>" + "<br/>";
+                    }
+                    document.getElementById("order-list").innerHTML = e;
+                })
+
                 $("#order-list").click(function () {
                     order_items.splice(this, 1);
                 })
@@ -238,24 +255,7 @@
                 $(".order-empty").click(function () {
                     order_items.splice(this);
                     $("#order-list").empty();
-
-                    // if (order_items.length === 0) {
-                    //     $("#order-listempty").hide();
-                    // } else {
-                    //     $("#order-listempty").show();
-                    // }
-                })
-
-                $(".order-TitleEdit").click(function () {
-                    console.log(order_items)
-                    console.log(this.innerText);
-                    order_items.push(this.innerText);
-
-                    var e = "";
-                    for (var y = 0; y < order_items.length; y++) {
-                        e += order_items[y] + "<div>" + "<br/>";
-                    }
-                    document.getElementById("order-list").innerHTML = e;
+                    $(".order-listempty").show();
                 })
 
 
