@@ -534,6 +534,17 @@ h4 {
   width: 70%;
 }
 
+#loginBtn {
+  /* background: white; */
+  border-color: #f1f1f1;
+  color:rgb(201, 85, 85);
+}
+
+#signBtn {
+  border-color: #f1f1f1;
+  color: rgb(201, 85, 85);
+}
+
 .order-empty {
   background-color: rgb(214, 214, 214);
 }

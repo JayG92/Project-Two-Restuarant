@@ -5,8 +5,9 @@ var passport = require("../config/passport");
 module.exports = function (app) {
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     res.json(req.user);
-    
-    
+    console.log("Logged In")
+
+
   });
 
   app.post("/api/signup", function (req, res) {
@@ -19,7 +20,13 @@ module.exports = function (app) {
       })
       .catch(function (err) {
         res.status(401).json(err);
+        console.log("This account already exists, Please log in.")
       });
+  });
+  app.get("/logout", function (req, res) {
+    req.logout();
+    res.redirect("/");
+    console.log("Logged out")
   });
 
   app.get("/a", function (req, res) {
@@ -89,16 +96,16 @@ module.exports = function (app) {
     });
   })
 
-app.post("/reservations", function (req, res) {
-  db.reservations.create({
-    name: req.body.name,
-    phone: req.body.phone,
-    party: req.body.party,
-    message: req.body.message,
-  }).then(function() {
-    // res.redirect(307, "/reservations");
+  app.post("/reservations", function (req, res) {
+    db.reservations.create({
+      name: req.body.name,
+      phone: req.body.phone,
+      party: req.body.party,
+      message: req.body.message,
+    }).then(function () {
+      // res.redirect(307, "/reservations");
+    })
   })
-})
 
 };
 
