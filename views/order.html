@@ -79,9 +79,10 @@
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link featured-attr" type="button" data-toggle="collapse"
-                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <h4 onclick="featured()">Featured <img style="width: 12px;"
+                                    <button class="btn btn-link order-links featured-attr" type="button"
+                                        data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        <h4 class="order-hover" onclick="featured()">Featured <img style="width: 12px;"
                                                 src="../images/drop-down-arrow.png"> </h4>
                                     </button>
                             </div>
@@ -97,8 +98,9 @@
                         <div class="card">
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link starters-attr" type="button" data-toggle="collapse"
-                                        data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <button class="btn btn-link starters-attr order-links" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                                        aria-controls="collapseTwo">
                                         <h4 onclick="starters()">Starters <img style="width: 12px;"
                                                 src="../images/drop-down-arrow.png"></h4>
                                     </button>
@@ -115,8 +117,9 @@
                         <div class="card">
                             <div class="card-header" id="headingThree">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link salads-soups-attr" type="button" data-toggle="collapse"
-                                        data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <button class="btn btn-link salads-soups-attr order-links" type="button"
+                                        data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                                        aria-controls="collapseThree">
                                         <h4 onclick="saladssoups()">Soups & Salads <img style="width: 12px;"
                                                 src="../images/drop-down-arrow.png"></h4>
                                     </button>
@@ -133,8 +136,9 @@
                         <div class="card">
                             <div class="card-header" id="headingFour">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link steaks-attr" type="button" data-toggle="collapse"
-                                        data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    <button class="btn btn-link steaks-attr order-links" type="button"
+                                        data-toggle="collapse" data-target="#collapseFour" aria-expanded="true"
+                                        aria-controls="collapseFour">
                                         <h4 onclick="steaks()">Steaks <img style="width: 12px;"
                                                 src="../images/drop-down-arrow.png"></h4>
                                     </button>
@@ -151,8 +155,9 @@
                         <div class="card">
                             <div class="card-header" id="headingFive">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link sides-attr" type="button" data-toggle="collapse"
-                                        data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    <button class="btn btn-link sides-attr order-links" type="button"
+                                        data-toggle="collapse" data-target="#collapseFive" aria-expanded="true"
+                                        aria-controls="collapseFive">
                                         <h4 onclick="sides()">Sides <img style="width: 12px;"
                                                 src="../images/drop-down-arrow.png"></h4>
                                     </button>
@@ -169,8 +174,9 @@
                         <div class="card">
                             <div class="card-header" id="headingSix">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link sides-attr" type="button" data-toggle="collapse"
-                                        data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                    <button class="btn btn-link desserts-attr order-links" type="button"
+                                        data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
+                                        aria-controls="collapseSix">
                                         <h4 onclick="desserts()">Desserts <img style="width: 12px;"
                                                 src="../images/drop-down-arrow.png"></h4>
                                     </button>
@@ -188,18 +194,20 @@
                         <h4>Order List</h4>
                         <hr>
                         <div id="clickedOrders">
-                                <div class="order-listempty">Add an item to your order!</div>
+                            <div class="order-listempty">Add an item to your order!</div>
                             <div id="order-list">
 
-        
+
                             </div>
                             <hr>
-                            <button type="button" class="btn btn-light order-empty">Empty</button>
                             <button type="button" class="btn btn-primary order-submitbtn">Submit Order</button>
+                            <button type="button" class="btn btn-light order-empty">Empty</button>
 
 
 
                         </div>
+                        <div class="alert alert-success order-success text-center" role="alert">Order submitted!</div>
+                        <div class="alert alert-danger order-success text-center" role="alert">Please add an item!</div>
                     </div>
                 </div>
             </div>
@@ -210,6 +218,31 @@
 
 </body>
 <script>
+    $(".order-success").hide();
+
+    $(".order-submitbtn").click(function () {
+        if (order_items.length === 0) {
+            $(".alert-danger").show();
+            setTimeout(function () {
+            $(".alert-danger").fadeOut();
+        }, 3000);
+    }
+})
+
+    $(".order-submitbtn").click(function () {
+        if (order_items.length > 0) {
+        $(".alert-success").show();
+
+        setTimeout(function () {
+            $('.order-success').fadeOut();
+            order_items.splice(this);
+        $("#order-list").empty();
+        $(".order-listempty").show();
+        }, 3000);
+    }
+    })
+
+
     var order_items = [];
     var cpt = 0;
     function select() { $(".order-listempty").hide(); }
@@ -236,21 +269,16 @@
                 }
 
                 $(".order-TitleEdit").click(function () {
-                    console.log(order_items)
-                    console.log(this.innerText);
                     order_items.push(this.innerText);
-                    
-
                     var e = "";
                     for (var y = 0; y < order_items.length; y++) {
-                        e += order_items[y] + "<div>" + "<br/>";
+                        e += "<div>" + order_items[y] + "</div>" + "<br/>";
                     }
                     document.getElementById("order-list").innerHTML = e;
                 })
-
-                $("#order-list").click(function () {
-                    order_items.splice(this, 1);
-                })
+                // $("#order-list").click(function () {
+                //     // order_items.splice()
+                // })
 
                 $(".order-empty").click(function () {
                     order_items.splice(this);
@@ -258,10 +286,7 @@
                     $(".order-listempty").show();
                 })
 
-
-
                 if ($('.featured-attr').attr('aria-expanded') === "false") {
-                    console.log("cleared");
                     $(".featured").empty();
                 }
             })
@@ -290,10 +315,24 @@
                     menuItem.append(itemDesc);
                 }
                 $(".order-TitleEdit").click(function () {
-                    console.log(this.innerText)
+                    order_items.push(this.innerText);
+                    var e = "";
+                    for (var y = 0; y < order_items.length; y++) {
+                        e += "<div>" + order_items[y] + "</div>" + "<br/>";
+                    }
+                    document.getElementById("order-list").innerHTML = e;
                 })
+                // $("#order-list").click(function () {
+                //     // order_items.splice()
+                // })
+
+                $(".order-empty").click(function () {
+                    order_items.splice(this);
+                    $("#order-list").empty();
+                    $(".order-listempty").show();
+                })
+
                 if ($('.starters-attr').attr('aria-expanded') === "false") {
-                    console.log("cleared");
                     $(".starters").empty();
                 }
             })
@@ -320,11 +359,24 @@
 
                 }
                 $(".order-TitleEdit").click(function () {
-                    console.log(this.innerText)
+                    order_items.push(this.innerText);
+                    var e = "";
+                    for (var y = 0; y < order_items.length; y++) {
+                        e += "<div>" + order_items[y] + "</div>" + "<br/>";
+                    }
+                    document.getElementById("order-list").innerHTML = e;
+                })
+                // $("#order-list").click(function () {
+                //     // order_items.splice()
+                // })
+
+                $(".order-empty").click(function () {
+                    order_items.splice(this);
+                    $("#order-list").empty();
+                    $(".order-listempty").show();
                 })
 
                 if ($('.salads-soups-attr').attr('aria-expanded') === "false") {
-                    console.log("cleared");
                     $(".salads-soups").empty();
                 }
             })
@@ -352,11 +404,24 @@
 
                 }
                 $(".order-TitleEdit").click(function () {
-                    console.log(this.innerText)
+                    order_items.push(this.innerText);
+                    var e = "";
+                    for (var y = 0; y < order_items.length; y++) {
+                        e += "<div>" + order_items[y] + "</div>" + "<br/>";
+                    }
+                    document.getElementById("order-list").innerHTML = e;
+                })
+                // $("#order-list").click(function () {
+                //     // order_items.splice()
+                // })
+
+                $(".order-empty").click(function () {
+                    order_items.splice(this);
+                    $("#order-list").empty();
+                    $(".order-listempty").show();
                 })
 
                 if ($('.steaks-attr').attr('aria-expanded') === "false") {
-                    console.log("cleared");
                     $(".steaks").empty();
                 }
             })
@@ -383,11 +448,24 @@
                     menuItem.append(itemDesc);
                 }
                 $(".order-TitleEdit").click(function () {
-                    console.log(this.innerText)
+                    order_items.push(this.innerText);
+                    var e = "";
+                    for (var y = 0; y < order_items.length; y++) {
+                        e += "<div>" + order_items[y] + "</div>" + "<br/>";
+                    }
+                    document.getElementById("order-list").innerHTML = e;
+                })
+                // $("#order-list").click(function () {
+                //     // order_items.splice()
+                // })
+
+                $(".order-empty").click(function () {
+                    order_items.splice(this);
+                    $("#order-list").empty();
+                    $(".order-listempty").show();
                 })
 
                 if ($('.sides-attr').attr('aria-expanded') === "false") {
-                    console.log("cleared");
                     $(".sides").empty();
                 }
             })
@@ -414,11 +492,24 @@
                     menuItem.append(itemDesc);
                 }
                 $(".order-TitleEdit").click(function () {
-                    console.log(this.innerText)
+                    order_items.push(this.innerText);
+                    var e = "";
+                    for (var y = 0; y < order_items.length; y++) {
+                        e += "<div>" + order_items[y] + "</div>" + "<br/>";
+                    }
+                    document.getElementById("order-list").innerHTML = e;
+                })
+                // $("#order-list").click(function () {
+                //     // order_items.splice()
+                // })
+
+                $(".order-empty").click(function () {
+                    order_items.splice(this);
+                    $("#order-list").empty();
+                    $(".order-listempty").show();
                 })
 
                 if ($('.desserts-attr').attr('aria-expanded') === "false") {
-                    console.log("cleared");
                     $(".desserts").empty();
                 }
             })
