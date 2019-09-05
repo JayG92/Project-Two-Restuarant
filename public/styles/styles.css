@@ -483,6 +483,18 @@ ul {
     font-size: 30px;
   }
 
+  .order-links {
+    color: #2A2C30;
+  }
+
+  .order-links:hover, .order-links:visited, .order-links:hover, .order-links:visited {
+    color: #2A2C30;
+    text-decoration: underline;
+    text-decoration-color: #2A2C30;
+  }
+
+
+
 
 
 /* --| Order Online |-- */
@@ -553,6 +565,11 @@ h4 {
   height: 40px;
 }
 
+.order-success {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: -5px;
+}
 
 
 
