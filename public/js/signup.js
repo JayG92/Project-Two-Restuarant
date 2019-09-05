@@ -33,14 +33,16 @@ $(document).ready(function() {
     })
       .then(function(data) {
         window.location.replace("/");
+        console.log("You've Signed up!")
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
+    alert("Account already exists, Please log in.")
+    // $("#alert .msg").text(err.responseJSON);
+    // $("#alert").fadeIn(500);
   }
 });
   
