@@ -9,7 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "animate.css": "^3.7.2",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "bulma": "^0.7.5",
     "dotenv": "^8.0.0",
     "expres": "0.0.5",
